@@ -1,0 +1,14 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "All projects",
+  "scripts": {
+    "dev:server": "cd server && yarn dev",
+    "dev:mobile": "cd mobile && yarn dev",
+    "dev:web": " cd web && yarn dev",
+    "install:all": "cd server && yarn && cd ../mobile && yarn && cd ../web && yarn",
+    "install:server": "cd server && yarn",
+    "install:mobile": "cd mobile && yarn",
+    "install:web": "cd web && yarn"
+  }
+}
