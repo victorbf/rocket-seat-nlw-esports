@@ -9,6 +9,8 @@
     "install:all": "cd server && yarn && cd ../mobile && yarn && cd ../web && yarn",
     "install:server": "cd server && yarn",
     "install:mobile": "cd mobile && yarn",
-    "install:web": "cd web && yarn"
+    "install:web": "cd web && yarn",
+    "studio": "cd server && yarn studio",
+    "migrate:dev": "cd server && yarn migrate:dev"
   }
 }
