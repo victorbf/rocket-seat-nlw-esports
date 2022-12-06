@@ -6,12 +6,15 @@ import {
   Inter_700Bold,
   Inter_900Black,
 } from '@expo-google-fonts/inter';
+import axios from 'axios';
 
-import { Home } from './src/screens/Home';
 import { Loading } from './src/components/Loading';
 import { Background } from './src/components/Background';
+import { Routes } from './src/routes';
 
-export default function App() {
+const App = () => {
+  axios.defaults.baseURL = 'http://192.168.86.160:3333';
+
   const [ fontsLoaded ] = useFonts({
     Inter_400Regular,
     Inter_600SemiBold,
@@ -26,7 +29,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      { fontsLoaded ? <Home /> : <Loading />}
+      { fontsLoaded ? <Routes /> : <Loading />}
     </Background>
   );
 }
+
+export default App;
